@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import cards from './data.json';
+import Card from './components/Card';
+
+//import your cards from json file AS cards
 
 class App extends Component {
+  state ={
+    cards // = []
+  }
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        {/* <Nav />
+        <Header /> */}
+        <div id="cardGrid">
+          {this.state.cards.map(card => <Card id={card.id} key={card.id} image={card.image} />)}
+        </div>
+
+        {/* <Footer /> */}
       </div>
     );
   }
