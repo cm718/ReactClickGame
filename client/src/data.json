@@ -1,0 +1,49 @@
+[{
+        "id": 0,
+        "image": "./images/bengali.jpg"
+    },
+    {
+        "id": 1,
+        "image": "./images/cheetara.jpg"
+    },
+    {
+        "id": 2,
+        "image": "./images/jackalman.jpg"
+    },
+    {
+        "id": 3,
+        "image": "./images/jaga.jpg"
+    },
+    {
+        "id": 4,
+        "image": "./images/liono.jpg"
+    },
+    {
+        "id": 5,
+        "image": "./images/monkian.jpg"
+    },
+    {
+        "id": 6,
+        "image": "./images/panthro.jpg"
+    },
+    {
+        "id": 7,
+        "image": "./images/slythe.jpg"
+    },
+    {
+        "id": 8,
+        "image": "./images/snarf.jpg"
+    },
+    {
+        "id": 9,
+        "image": "./images/tygra.jpg"
+    },
+    {
+        "id": 10,
+        "image": "./images/wilycat.jpg"
+    },
+    {
+        "id": 11,
+        "image": "./images/wilykit.jpg"
+    }
+]
