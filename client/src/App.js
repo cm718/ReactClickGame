@@ -12,16 +12,19 @@ class App extends Component {
     cards // = []
   }
 
-
   render() {
     return (
       <div>
         <Nav />
         <Header />
-        <div id="cardGrid">
-          {this.state.cards.map(card => <Card id={card.id} key={card.id} image={card.image} />)}
-        </div>
+        <div className="container">
+          <div className='row'>
+            {this.state.cards.map(card => <Card id={card.id} key={card.id} image={card.image} />)}
+          </div>
 
+          
+
+        </div>
         {/* <Footer /> */}
       </div>
     );
