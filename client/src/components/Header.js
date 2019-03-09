@@ -11,7 +11,7 @@ const H2 = styled.h2`
 
 const Header = (props) => {
     return(
-        <H2><em>Don't click the same image twice!</em></H2>
+        <H2><em>{props.message}</em></H2>
     )
 }
 
