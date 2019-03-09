@@ -12,6 +12,12 @@ class App extends Component {
     cards // = []
   }
 
+  handleClick = event => {
+    event.preventDefault();
+
+    
+  }
+
   render() {
     return (
       <div>
@@ -19,13 +25,9 @@ class App extends Component {
         <Header />
         <div className="container">
           <div className='row'>
-            {this.state.cards.map(card => <Card id={card.id} key={card.id} image={card.image} />)}
+            {this.state.cards.map(card => <Card onClick={this.handleClick} id={card.id} key={card.id} image={card.image} />)}
           </div>
-
-          
-
         </div>
-        {/* <Footer /> */}
       </div>
     );
   }
