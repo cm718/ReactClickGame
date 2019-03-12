@@ -6,6 +6,8 @@ const Image = styled.img`
     height:150px;
     object-fit: cover;
     overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 6px;
 `
 
 const Card = (props) => {
