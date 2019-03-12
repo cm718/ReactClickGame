@@ -4,20 +4,24 @@ import cards from './data.json';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import Card from './components/Card';
+import Footer from './components/Footer';
 
-//import your cards from json file AS cards
 
 class App extends Component {
-  state ={
-    cards
+  constructor(props){
+    super(props) 
+      
+      this.state ={
+        cards
+      }
+      
   }
-
   handleClick = event => {
     event.preventDefault();
-
+    alert('hello');
     
-  }
-
+  };
+      
   render() {
     return (
       <div>
@@ -28,9 +32,13 @@ class App extends Component {
             {this.state.cards.map(card => <Card onClick={this.handleClick} id={card.id} key={card.id} image={card.image} />)}
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
+    
 }
+  
+  
 
 export default App;
