@@ -10,13 +10,13 @@ const Image = styled.img`
     border-radius: 6px;
 `
 
-const Card = (props) => {
+const Card = props => {
     return(
 
         <div className='col l3 m3 s4 xs4'>
             <div className='card'>
                 <div className='card-image'>
-                     <Image src={props.image} />
+                     <Image onClick={props.handleClick} src={props.image}/>
                 </div>            
             </div>
         </div>
