@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
+body {
+  vh: 100%;
+}
+
 div {
   text-align: center;
 }
 
+.container {
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+
 h1 {
   font-family: Permanent Marker;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  flex-shrink: 0;
+  padding: 20px;
+  width: 100%;
 }
