@@ -3,20 +3,17 @@ import styled from 'styled-components';
 
 const H2 = styled.h2`
     font-size:20px;
-    font-family: hand-written;
     font-weight: 700;
-    padding: 10px;
+    padding: 15px;
     background-color: #333;
     color: white;
     text-align: center;
-    margin: 0;
+    margin-top: 0;
 `
 
-const Header = (props) => {
-    const greeting = 'Only click each image once!';
-
+const Header = props => {
     return(
-        <H2><em>{greeting}</em></H2>
+        <H2><em>{props.message}</em></H2>
     )
 }
 
