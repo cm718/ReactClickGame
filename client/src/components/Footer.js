@@ -4,7 +4,7 @@ export class Footer extends Component {
   render() {
     return (
       <footer>
-        React Click Game Copyright 2019
+        <em>Built with React</em>
       </footer>
     )
   }
