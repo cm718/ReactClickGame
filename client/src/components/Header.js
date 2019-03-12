@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const H2 = styled.h2`
     font-size:20px;
     font-family: hand-written;
+    font-weight: 700;
     padding: 10px;
     background-color: #333;
     color: white;
