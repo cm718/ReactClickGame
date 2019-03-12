@@ -33,16 +33,21 @@ class App extends Component {
       console.log('game over');
       // clear the set
       this.state.clickedIDs.clear();
+      // change the message to let them know they lost
       this.setState({
-        message: 'Oh no! You already clicked that one!'
+        message: 'Game over!'
       })
     }
     // if the clicked id is not in the set
     else{
       this.state.clickedIDs.add(id)
-      this.setState({
-        message: 'Success!'
-      })
+      if (this.state.clickedIDs.size === 12){
+        this.setState({message: 'You win!'});
+      } else {
+        this.setState({
+          message: 'Success!'
+        })
+      }
     }
 
     this.setState({score: this.state.clickedIDs.size})
