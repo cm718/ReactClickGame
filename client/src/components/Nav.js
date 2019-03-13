@@ -35,6 +35,7 @@ const Nav = props => {
         <div style={navStyle}>
             <H1>Thundercats</H1>
             <H2>Memory Game</H2>
+            <H2>Click each image once</H2>
         </div>
     )
 }
