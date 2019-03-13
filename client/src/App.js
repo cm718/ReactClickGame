@@ -29,28 +29,45 @@ class App extends Component {
     
     // if the clicked id is already in the set
     if(this.state.clickedIDs.has(id)){
-      //log game over
-      console.log('game over');
       // clear the set
       this.state.clickedIDs.clear();
       // change the message to let them know they lost
       this.setState({
         message: 'Game over!'
       })
-    }
-    // if the clicked id is not in the set
+    } // else the clicked id is not in the set
     else{
+      // add the id to the set
       this.state.clickedIDs.add(id)
+      // if the set already holds all 12 declare winner
       if (this.state.clickedIDs.size === 12){
-        this.setState({message: 'You win!'});
-      } else {
+        // update top score
+        if (this.state.topScore <= this.state.clickedIDs.size){
+          this.setState({topScore: this.state.clickedIDs.size})
+        }
+        // set the message to 'You win'
+        this.setState({
+          message: 'You win!'
+        });
+      } // else declare success and keep game going 
+      else {
+        // set the top score to highest score
+        if (this.state.topScore <= this.state.clickedIDs.size){
+          this.setState({topScore: this.state.clickedIDs.size})
+        }
+        // update the message to 'Success!'
         this.setState({
           message: 'Success!'
-        })
+        });
       }
     }
-
+    // set the score equal to the size of the set holding the IDs
     this.setState({score: this.state.clickedIDs.size})
+
+
+    // if (this.state.score > this.state.topScore){
+    //   this.setState({topScore: this.state.score})
+    // }
 
   };
       
@@ -58,7 +75,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <Header message={`${this.state.message} Score: ${this.state.score}`} />
+        <Header message={`${this.state.message} | Score: ${this.state.score} | Top Score: ${this.state.topScore}`} />
         <div className="container">
           <div className='row'>
             {this.state.cards.map(card => 
