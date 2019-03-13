@@ -13,7 +13,7 @@ const H2 = styled.h2`
 
 const Header = props => {
     return(
-        <H2><em>{props.message}</em></H2>
+        <H2>{props.message}</H2>
     )
 }
 
