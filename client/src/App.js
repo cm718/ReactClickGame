@@ -13,20 +13,17 @@ class App extends Component {
       
       this.state ={
         cards,
-        message: 'Only click each image once!',
+        message: 'Hoooooo!',
         score: 0,
         topScore: 0,
         clickedIDs: new Set()
       }
       
   }
-  handleClick = id => {
-    console.log('id', id);
 
-    //check if id is in set
-    console.log('has ID', this.state.clickedIDs.has(id));
-    
-    
+  handleClick = id => {
+    const newShuffle = this.state.cards.sort(function () { return 0.5 - Math.random() });
+
     // if the clicked id is already in the set
     if(this.state.clickedIDs.has(id)){
       // clear the set
@@ -35,21 +32,21 @@ class App extends Component {
       this.setState({
         message: 'Game over!'
       })
-    } // else the clicked id is not in the set
-    else{
+    } else{
       // add the id to the set
       this.state.clickedIDs.add(id)
       // if the set already holds all 12 declare winner
       if (this.state.clickedIDs.size === 12){
         // update top score
-        if (this.state.topScore <= this.state.clickedIDs.size){
+        if (this.state.topScore < this.state.clickedIDs.size){
           this.setState({topScore: this.state.clickedIDs.size})
-        }
-        // set the message to 'You win'
-        this.setState({
-          message: 'You win!'
-        });
-      } // else declare success and keep game going 
+          // set the message to 'You win' 
+          this.setState({
+            message: 'You win!'
+          });
+        } 
+      } 
+      // else declare success and keep game going 
       else {
         // set the top score to highest score
         if (this.state.topScore <= this.state.clickedIDs.size){
@@ -60,15 +57,10 @@ class App extends Component {
           message: 'Success!'
         });
       }
+      this.setState({cards: newShuffle})
     }
     // set the score equal to the size of the set holding the IDs
     this.setState({score: this.state.clickedIDs.size})
-
-
-    // if (this.state.score > this.state.topScore){
-    //   this.setState({topScore: this.state.score})
-    // }
-
   };
       
   render() {
