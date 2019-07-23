@@ -27,3 +27,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+
+### The Classic Memory Game
+
+The twist is that you are not flipping the cards, the cards are flipping around on you. Each time you click a card they will shuffle themselves. The goal is to never click on the same card twice. The high score will be 12. You can play the game as many times as you like and it will keep track of your score.
+
